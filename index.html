@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Котики</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Котики</h1>
+    
+    <div class="cats-list"></div>
+
+    <button class="add-cat-btn">Добавить котика</button>
+    
+    <!-- Модальное окно для отображения информации о коте и его редактирования -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Информация о коте</h2>
+            <form id="cat-form">
+                <input type="hidden" id="cat-id">
+                <label for="cat-name">Имя кота:</label>
+                <input type="text" id="cat-name">
+                <label for="cat-age">Возраст:</label>
+                <input type="number" id="cat-age">
+                <label for="cat-rate">Рейтинг:</label>
+                <input type="number" id="cat-rate" min="1" max="10">
+                <label for="cat-description">Описание:</label>
+                <textarea id="cat-description"></textarea>
+                <label for="cat-favorite">Избранное:</label>
+                <input type="checkbox" id="cat-favorite">
+                <label for="cat-image">Изображение (url):</label>
+                <input type="text" id="cat-image">
+                <button type="submit" id="save-cat-btn">Сохранить</button>
+                <button type="button" id="delete-cat-btn">Удалить</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+	<script src="api2.js"></script>
+	<script src="api.js"></script>
+</body>
+</html>
